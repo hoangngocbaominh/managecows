@@ -1,7 +1,7 @@
 import "./App.css";
 import "antd/dist/antd.css";
-import FarmCost from "./components/FarmCost";
-import PaymentMethod from "./components/PaymentMethod";
+import FarmCost from "./components/FarmCost/FarmCost";
+import PaymentMethod from "./components/PaymentMethod/PaymentMethod";
 function App() {
   const titleFarmCost = "cơ bản";
   const titleAdvanceFarmCost = "nâng cao";

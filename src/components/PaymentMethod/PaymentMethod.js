@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Steps } from "antd";
-import "../styles/methodpayment.css";
+import "../PaymentMethod/methodpayment.css";
 import useMediaQuery from "use-media-antd-query";
 
 const { Title } = Typography;

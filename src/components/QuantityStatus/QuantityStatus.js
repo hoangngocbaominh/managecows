@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Slider } from "antd";
-import "../styles/quantitystatus.css";
+import "../QuantityStatus/quantitystatus.css";
 QuantityStatus.propTypes = {
     quantityCows: PropTypes.func,
 };

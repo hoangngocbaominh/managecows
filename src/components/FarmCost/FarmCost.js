@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Button, Col, Row, Typography } from "antd";
-import QuantityStatus from "./QuantityStatus";
-import InvestmentCost from "./InvestmentCost";
-import OperationCost from "./OperationCost";
-import "../styles/farmcost.css";
+import QuantityStatus from "../QuantityStatus/QuantityStatus";
+import InvestmentCost from "../InvestmentCost/InvestmentCost";
+import OperationCost from "../OperationCost/OperationCost";
+import "../FarmCost/farmcost.css";
 import { Link } from "react-scroll";
 const { Title } = Typography;
 FarmCost.propTypes = {
