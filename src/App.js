@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import "antd/dist/antd.css";
+import FarmCost from "./components/FarmCost";
+import PaymentMethod from "./components/PaymentMethod";
 function App() {
+  const titleFarmCost = "cơ bản";
+  const titleAdvanceFarmCost = "nâng cao";
+  const backgroundColor = "#8dc63f";
+  const width = "100%";
+  const border = "1px white soild";
+  const ratesNomalCows = 70;
+  const ratesAdvanceCows = 80;
+  const ratesNomalSows = 115;
+  const ratesAdvanceSows = 125;
+  const backGroundStatus = "white";
+  const investmentCost = 20000000;
+  const investmentCostAdvance = 40000000;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App app-general">
+      <FarmCost
+        title={titleFarmCost}
+        ratesCows={ratesNomalCows}
+        ratesSows={ratesNomalSows}
+        investmentCost={investmentCost}
+      />
+      <FarmCost
+        title={titleAdvanceFarmCost}
+        backgroundColor={backgroundColor}
+        width={width}
+        border={border}
+        backGroundStatus={backGroundStatus}
+        ratesCows={ratesAdvanceCows}
+        ratesSows={ratesAdvanceSows}
+        investmentCost={investmentCostAdvance}
+      />
+        <PaymentMethod />
     </div>
   );
 }
