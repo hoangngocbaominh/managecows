@@ -24,6 +24,9 @@ FarmCost.defaultProps = {
   investmentCost: null,
 }
 function FarmCost(props) {
+  const titleCows = "Bò thịt";
+  const titleSows = "Bò nái";  
+
   const { title, backgroundColor, border,ratesCows, ratesSows, investmentCost} = props;
   const initialPriceCows = (100 * ratesCows).toLocaleString();
   const initialPriceSows = (100 * ratesSows).toLocaleString();
@@ -81,12 +84,14 @@ function FarmCost(props) {
                   <OperationCost
                     totalPrice={totalPriceCows}
                     rates={ratesCows}
+                    titleCows = {titleCows}
                   />
                 </Col>
                 <Col lg={24} sm={12} xs={24}>
                   <OperationCost
                     totalPrice={totalPriceSows}
-                    rates={ratesCows}
+                    rates={ratesSows}
+                    titleCows = {titleSows}
                   />
                 </Col>
               </Row>

@@ -29,7 +29,7 @@ function PaymentMethod(props) {
           />
           <Step title="+7 ngày" description="Thời gian khách hàng thanh toán" />
           <Step
-            title="+99 ngày"
+            title="+9 ngày"
             description="Hệ thống gửi xác nhận thanh toán email cho khách hàng"
           />
         </Steps>

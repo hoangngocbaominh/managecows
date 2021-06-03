@@ -16,7 +16,7 @@ OperationCost.defaultProps = {
 }
 
 function OperationCost(props) {
-  const { totalPrice, rates } = props;
+  const { totalPrice, rates, titleCows } = props;
   return (
     <>
       <Card className="shadow">
@@ -27,7 +27,7 @@ function OperationCost(props) {
             xs={10}
             style={{ fontSize: "20px", textAlign: "left" }}
           >
-            <Text>Bò thịt</Text>
+            <Text>{titleCows}</Text>
           </Col>
           <Col lg={14} sm={18} xs={14} style={{ textAlign: "right", paddingTop: "7px" }}>
             <Text style>Tỉ giá: {rates} đồng/con/ngày</Text>

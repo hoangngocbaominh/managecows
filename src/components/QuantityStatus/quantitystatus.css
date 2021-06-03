@@ -19,12 +19,13 @@
 }
 .wrap-status .ant-slider-track,
 .wrap-slider .ant-slider:hover .ant-slider-track {
-  background-color: #8dc63f;
+  background-color: #4e8501;
 }
 .wrap-status .ant-slider-handle.ant-tooltip-open {
-  border-color: #8dc63f;
-  background-color: #8dc63f;
+  border-color: white !important;
+  background-color: #4e8501;
   top: -3px;
+  border: 1px white solid;
 }
 .ant-slider {
   background: #ffffff !important;
@@ -38,7 +39,7 @@
   background-color: white !important;
 }
 .ant-slider:hover .ant-slider-track {
-  background-color: #8dc63f;
+  background-color: #4e8501;
 }
 .ant-slider:hover .ant-slider-rail {
   background-color: transparent;

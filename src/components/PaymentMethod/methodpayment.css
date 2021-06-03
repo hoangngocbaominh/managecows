@@ -66,8 +66,8 @@ h3.ant-typography,
   }
 
   .ant-steps-item-description {
-    transform: translateX(10px);
-  }
+    transform: translate(30px, -28px);
+}
   .ant-steps-item-content {
     overflow: unset !important;
   }

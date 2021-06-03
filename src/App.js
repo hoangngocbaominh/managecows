@@ -15,7 +15,7 @@ function App() {
   const backGroundStatus = "white";
   const investmentCost = 20000000;
   const investmentCostAdvance = 40000000;
-
+ 
   return (
     <div className="App app-general">
       <FarmCost
@@ -23,6 +23,7 @@ function App() {
         ratesCows={ratesNomalCows}
         ratesSows={ratesNomalSows}
         investmentCost={investmentCost}
+        
       />
       <FarmCost
         title={titleAdvanceFarmCost}
