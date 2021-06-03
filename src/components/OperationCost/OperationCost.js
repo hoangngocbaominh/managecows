@@ -4,6 +4,7 @@ import { Card, Col, Row, Typography } from "antd";
 import "../FarmCost/farmcost.css";
 import "../../styles/shadow.css";
 import "../../styles/styles.css";
+import "../OperationCost/operationcost.css";
 const { Title, Text } = Typography;
 
 OperationCost.propTypes = {
@@ -30,7 +31,7 @@ function OperationCost(props) {
             style={{ fontSize: "20px", textAlign: "left" }}
           >
             <Text>{titleCows}</Text>
-            <div style={{fontSize:"15px"}}>Tỉ giá: {rates} vnđ/ngày</div>
+            <div style={{fontSize:"15px"}} className="rates">Tỉ giá: {rates} vnđ/ngày</div>
             
           </Col>
           <Col
@@ -39,7 +40,7 @@ function OperationCost(props) {
             xs={10}
             style={{ textAlign: "right", paddingTop: "7px" }}
           >
-            <Title className="title-color" level={4}>
+            <Title className="title-color total-prices" level={4}>
               {totalPrice} vnđ/ngày
             </Title>
           </Col>
