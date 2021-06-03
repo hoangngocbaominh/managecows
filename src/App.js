@@ -8,14 +8,15 @@ function App() {
   const backgroundColor = "#8dc63f";
   const width = "100%";
   const border = "1px white soild";
-  const ratesNomalCows = 70;
-  const ratesAdvanceCows = 80;
-  const ratesNomalSows = 115;
-  const ratesAdvanceSows = 125;
+  const ratesNomalCows = 68;
+  const ratesAdvanceCows = 68;
+  const ratesNomalSows = 116;
+  const ratesAdvanceSows = 116;
   const backGroundStatus = "white";
   const investmentCost = 20000000;
   const investmentCostAdvance = 40000000;
- 
+  const totalPriceColor = "#8dc63f";
+  const totalPriceColorNomalFarm = "#ffffff";
   return (
     <div className="App app-general">
       <FarmCost
@@ -23,7 +24,8 @@ function App() {
         ratesCows={ratesNomalCows}
         ratesSows={ratesNomalSows}
         investmentCost={investmentCost}
-        
+        totalPriceColor={totalPriceColor}
+    
       />
       <FarmCost
         title={titleAdvanceFarmCost}
@@ -34,6 +36,7 @@ function App() {
         ratesCows={ratesAdvanceCows}
         ratesSows={ratesAdvanceSows}
         investmentCost={investmentCostAdvance}
+        totalPriceColor={totalPriceColorNomalFarm}
       />
         <PaymentMethod />
     </div>

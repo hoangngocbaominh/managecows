@@ -3,35 +3,45 @@ import PropTypes from "prop-types";
 import { Card, Col, Row, Typography } from "antd";
 import "../FarmCost/farmcost.css";
 import "../../styles/shadow.css";
-
+import "../../styles/styles.css";
 const { Title, Text } = Typography;
 
 OperationCost.propTypes = {
   totalPrice: PropTypes.number,
-  rates:PropTypes.number
+  rates: PropTypes.number,
+  titleCows: PropTypes.string,
 };
 OperationCost.defaultProps = {
   totalPrice: null,
-  rates:null,
-}
+  rates: null,
+  titleCows: "",
+};
 
 function OperationCost(props) {
   const { totalPrice, rates, titleCows } = props;
   return (
     <>
       <Card className="shadow">
-        <Row>
+        <Row style={{justifyContent: "space-between"}}>
           <Col
-            lg={10}
-            sm={6}
-            xs={10}
+            lg={12}
+            sm={10}
+            xs={12}
             style={{ fontSize: "20px", textAlign: "left" }}
           >
             <Text>{titleCows}</Text>
+            <div style={{fontSize:"15px"}}>Tỉ giá: {rates} vnđ/ngày</div>
+            
           </Col>
-          <Col lg={14} sm={18} xs={14} style={{ textAlign: "right", paddingTop: "7px" }}>
-            <Text style>Tỉ giá: {rates} đồng/con/ngày</Text>
-            <Title level={4}>{totalPrice} vnđ/ngày</Title>
+          <Col
+            lg={12}
+            sm={12}
+            xs={10}
+            style={{ textAlign: "right", paddingTop: "7px" }}
+          >
+            <Title className="title-color" level={4}>
+              {totalPrice} vnđ/ngày
+            </Title>
           </Col>
         </Row>
       </Card>

@@ -5,6 +5,8 @@ import QuantityStatus from "../QuantityStatus/QuantityStatus";
 import InvestmentCost from "../InvestmentCost/InvestmentCost";
 import OperationCost from "../OperationCost/OperationCost";
 import "../FarmCost/farmcost.css";
+import "../OperationCost/operationcost.css";
+import "../../styles/styles.css";
 import { Link } from "react-scroll";
 const { Title } = Typography;
 FarmCost.propTypes = {
@@ -22,30 +24,40 @@ FarmCost.defaultProps = {
   ratesCows: null,
   ratesSows: null,
   investmentCost: null,
-}
+};
 function FarmCost(props) {
   const titleCows = "Bò thịt";
-  const titleSows = "Bò nái";  
+  const titleSows = "Bò nái";
 
-  const { title, backgroundColor, border,ratesCows, ratesSows, investmentCost} = props;
-  const initialPriceCows = (100 * ratesCows).toLocaleString();
-  const initialPriceSows = (100 * ratesSows).toLocaleString();
+  const {
+    title,
+    backgroundColor,
+    border,
+    ratesCows,
+    ratesSows,
+    investmentCost,
+    totalPriceColor,
+  } = props;
+  const initialPriceCows = 100 * ratesCows;
+  const initialPriceSows = 100 * ratesSows;
   const [totalPriceCows, setTotalPriceCows] = useState(initialPriceCows);
   const [totalPriceSows, setTotalPriceSows] = useState(initialPriceSows);
 
   const handleQuantityCows = (quantityCows) => {
+    console.log("cows", quantityCows);
     const priceCows = quantityCows * ratesCows;
-    const priceSows = quantityCows * ratesSows;
-    const formatPriceCows = priceCows.toLocaleString();
-    const formatPriceSows = priceSows.toLocaleString();
-    setTotalPriceCows(formatPriceCows);
-    setTotalPriceSows(formatPriceSows);
+    setTotalPriceCows(priceCows);
   };
 
+  const handleQuantitySows = (quantitySows) => {
+    console.log("sows", quantitySows);
+    const priceSows = quantitySows * ratesSows;
+    setTotalPriceSows(priceSows);
+  };
   return (
     <div style={{ backgroundColor }}>
       <div className="container">
-        <div className="farm-cost" style={{}}>
+        <div className="farm-cost">
           <Title level={4} style={{ margin: "0" }}>
             Chi phí của trang trại {title}
           </Title>
@@ -54,10 +66,14 @@ function FarmCost(props) {
           </Title>
 
           <Row>
-            <QuantityStatus quantityCows={handleQuantityCows} border={border} />
+            <QuantityStatus
+              quantityCows={handleQuantityCows}
+              quantitySows={handleQuantitySows}
+              border={border}
+            />
           </Row>
 
-          <Row gutter={[24, 24]}>
+          <Row gutter={[24, 24]} className="operation-costs">
             <Col
               lg={12}
               sm={24}
@@ -68,30 +84,35 @@ function FarmCost(props) {
                 flexFlow: "column",
               }}
             >
-              <Title className="operation-costs" level={4}>
-                Chi phí vận hành hàng ngày
-              </Title>
-              <InvestmentCost investmentCost={investmentCost}/>
+              <Title level={5}>Phí cài đặt (Thanh toán một lần duy nhất)</Title>
+              <InvestmentCost investmentCost={investmentCost} />
             </Col>
 
             <Col lg={12} sm={24} style={{ minHeight: "100px", width: "100%" }}>
-              <Title className="operation-costs" level={4}>
-                Chi phí vận hành hàng ngày
-              </Title>
+              <Title level={5}>Chi phí vận hành (Thanh toán hằng tháng)</Title>
 
               <Row gutter={[24, 24]}>
+                <Col lg={24} sm={24} xs={24}>
+                  <Title
+                    level={1}
+                    style={{ textAlign: "left", color: totalPriceColor}}
+
+                  >
+                    +{(totalPriceSows + totalPriceCows).toLocaleString()} vnđ/ngày
+                  </Title>
+                </Col>
                 <Col lg={24} sm={12} xs={24}>
                   <OperationCost
-                    totalPrice={totalPriceCows}
+                    totalPrice={totalPriceCows.toLocaleString()}
                     rates={ratesCows}
-                    titleCows = {titleCows}
+                    titleCows={titleCows}
                   />
                 </Col>
                 <Col lg={24} sm={12} xs={24}>
                   <OperationCost
-                    totalPrice={totalPriceSows}
+                    totalPrice={totalPriceSows.toLocaleString()}
                     rates={ratesSows}
-                    titleCows = {titleSows}
+                    titleCows={titleSows}
                   />
                 </Col>
               </Row>

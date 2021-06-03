@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Typography, Card } from "antd";
 import "../../styles/shadow.css";
+import "../../styles/styles.css";
 const { Title } = Typography;
 InvestmentCost.propTypes = {
   investmentCost: PropTypes.number,
@@ -25,9 +26,10 @@ function InvestmentCost(props) {
           position: "absolute",
           top: "50%",
           left: "50%",
-          fontSize: "38px",
+          fontSize: "45px",
           transform: `translate(${-50}%, ${-50}%)`,
         }}
+        className="title-color"
       >
        {investment}/lần
       </Title>

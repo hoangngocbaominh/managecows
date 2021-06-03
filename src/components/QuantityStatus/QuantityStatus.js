@@ -3,36 +3,65 @@ import PropTypes from "prop-types";
 import { Slider } from "antd";
 import "../QuantityStatus/quantitystatus.css";
 QuantityStatus.propTypes = {
-    quantityCows: PropTypes.func,
+  quantityCows: PropTypes.func,
+  quantitySows: PropTypes.func,
 };
 QuantityStatus.PropDefault = {
-    quantityCows: null,
-}
+  quantityCows: null,
+  quantitySows: null,
+};
 
 function QuantityStatus(props) {
-  const {quantityCows, border} = props;
+  const { quantityCows, border, quantitySows } = props;
   const marks = {
     100: "100",
     5000: "5000",
   };
-  const handleQuantityStatus = (value) =>{
-        quantityCows(value);
-  }
-
+  const handleQuantityStatusCows = (value) => {
+    quantityCows(value);
+  };
+  const handleQuantityStatusSows = (value) => {
+    quantitySows(value);
+  };
   return (
     <>
-      <div className="wrap-status" style={{ width: "100%", height: "50%", position: "relative" }}>
+      <div
+        className="wrap-status"
+        style={{ width: "100%", height: "50%", position: "relative" }}
+      >
+        {/* <p className="quantity-left">100 con</p>
+        <p className="quantity-right">5000 con</p> */}
+        <div className="quantity-content">
         <p className="quantity-left">100 con</p>
         <p className="quantity-right">5000 con</p>
-        <Slider
-          marks={marks}
-          step={50}
-          min={100} 
-          max={5000}
-          tooltipVisible
-          onChange={handleQuantityStatus}
-          style={{border, borderRadius: "10px", padding: 0}}
-        />
+          <h4>Bò thịt</h4>
+          <Slider
+            marks={marks}
+            step={50}
+            min={100}
+            max={5000}
+            tooltipVisible
+            onChange={handleQuantityStatusCows}
+            style={{ border, borderRadius: "10px", padding: 0, width: "100%" }}
+          />
+        </div>
+
+        <div className="quantity-content">
+        <p className="quantitySows-left">100 con</p>
+        <p className="quantitySows-right">5000 con</p>
+          <h4>Bò nái</h4>
+          <Slider
+            marks={marks}
+            step={50}
+            min={100}
+            max={5000}
+            tooltipVisible
+            onChange={handleQuantityStatusSows}
+            style={{ border, borderRadius: "10px", padding: 0, width: "100%" }}
+          />
+        </div>
+
+       
       </div>
     </>
   );
