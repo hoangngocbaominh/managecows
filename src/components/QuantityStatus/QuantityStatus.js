@@ -12,7 +12,7 @@ QuantityStatus.PropDefault = {
 };
 
 function QuantityStatus(props) {
-  const { quantityCows, border, quantitySows } = props;
+  const { quantityCows, quantitySows } = props;
   const marks = {
     100: "100",
     5000: "5000",
@@ -42,7 +42,7 @@ function QuantityStatus(props) {
             max={5000}
             tooltipVisible
             onChange={handleQuantityStatusCows}
-            style={{ border, borderRadius: "10px", padding: 0, width: "100%" }}
+            style={{borderRadius: "10px", padding: 0, width: "100%" }}
           />
         </div>
 
@@ -57,7 +57,7 @@ function QuantityStatus(props) {
             max={5000}
             tooltipVisible
             onChange={handleQuantityStatusSows}
-            style={{ border, borderRadius: "10px", padding: 0, width: "100%" }}
+            style={{borderRadius: "10px", padding: 0, width: "100%" }}
           />
         </div>
 

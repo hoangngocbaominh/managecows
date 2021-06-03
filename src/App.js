@@ -7,7 +7,6 @@ function App() {
   const titleAdvanceFarmCost = "nâng cao";
   const backgroundColor = "#8dc63f";
   const width = "100%";
-  const border = "1px white soild";
   const ratesNomalCows = 68;
   const ratesAdvanceCows = 68;
   const ratesNomalSows = 116;
@@ -31,7 +30,6 @@ function App() {
         title={titleAdvanceFarmCost}
         backgroundColor={backgroundColor}
         width={width}
-        border={border}
         backGroundStatus={backGroundStatus}
         ratesCows={ratesAdvanceCows}
         ratesSows={ratesAdvanceSows}

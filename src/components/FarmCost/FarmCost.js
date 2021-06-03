@@ -12,7 +12,6 @@ const { Title } = Typography;
 FarmCost.propTypes = {
   title: PropTypes.string,
   backgroundColor: PropTypes.string,
-  border: PropTypes.string,
   ratesCows: PropTypes.number,
   ratesSows: PropTypes.number,
   investmentCost: PropTypes.number,
@@ -20,7 +19,6 @@ FarmCost.propTypes = {
 FarmCost.defaultProps = {
   title: "",
   backgroundColor: "",
-  border: "",
   ratesCows: null,
   ratesSows: null,
   investmentCost: null,
@@ -32,7 +30,6 @@ function FarmCost(props) {
   const {
     title,
     backgroundColor,
-    border,
     ratesCows,
     ratesSows,
     investmentCost,
@@ -69,7 +66,6 @@ function FarmCost(props) {
             <QuantityStatus
               quantityCows={handleQuantityCows}
               quantitySows={handleQuantitySows}
-              border={border}
             />
           </Row>
 
