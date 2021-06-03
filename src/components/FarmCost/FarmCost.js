@@ -10,7 +10,6 @@ const { Title } = Typography;
 FarmCost.propTypes = {
   title: PropTypes.string,
   backgroundColor: PropTypes.string,
-  border: PropTypes.string,
   ratesCows: PropTypes.number,
   ratesSows: PropTypes.number,
   investmentCost: PropTypes.number,
@@ -18,7 +17,6 @@ FarmCost.propTypes = {
 FarmCost.defaultProps = {
   title: "",
   backgroundColor: "",
-  border: "",
   ratesCows: null,
   ratesSows: null,
   investmentCost: null,
@@ -27,7 +25,7 @@ function FarmCost(props) {
   const titleCows = "Bò thịt";
   const titleSows = "Bò nái";  
 
-  const { title, backgroundColor, border,ratesCows, ratesSows, investmentCost} = props;
+  const { title, backgroundColor, ratesCows, ratesSows, investmentCost} = props;
   const initialPriceCows = (100 * ratesCows).toLocaleString();
   const initialPriceSows = (100 * ratesSows).toLocaleString();
   const [totalPriceCows, setTotalPriceCows] = useState(initialPriceCows);
@@ -54,7 +52,7 @@ function FarmCost(props) {
           </Title>
 
           <Row>
-            <QuantityStatus quantityCows={handleQuantityCows} border={border} />
+            <QuantityStatus quantityCows={handleQuantityCows}  />
           </Row>
 
           <Row gutter={[24, 24]}>

@@ -8,11 +8,13 @@ const { Title, Text } = Typography;
 
 OperationCost.propTypes = {
   totalPrice: PropTypes.number,
-  rates:PropTypes.number
+  rates:PropTypes.number,
+  titleCows: PropTypes.string,
 };
 OperationCost.defaultProps = {
   totalPrice: null,
   rates:null,
+  titleCows: "",
 }
 
 function OperationCost(props) {
