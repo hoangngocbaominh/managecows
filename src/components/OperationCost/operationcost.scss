@@ -1,6 +1,8 @@
 .container {
-  .operation-costs .ant-typography {
-    text-align: left !important;
+  .operation-costs {
+    .ant-typography {
+      text-align: left !important;
+    }
   }
   @media only screen and (max-width: 727px) {
     .title-color.total-prices {

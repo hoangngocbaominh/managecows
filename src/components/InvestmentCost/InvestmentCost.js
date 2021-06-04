@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Typography, Card } from "antd";
 import "../../styles/shadow.scss";
 import "../../styles/styles.scss";
+import "../InvestmentCost/investment.scss";
 const { Title } = Typography;
 InvestmentCost.propTypes = {
   investmentCost: PropTypes.number,
@@ -17,19 +18,20 @@ function InvestmentCost(props) {
   const investment = investmentCost.toLocaleString();
   return (
     <Card
-      className="shadow"
-      style={{ width: "100%", height: "100%", position: "relative", flex: 1}}
+      className="shadow investment-card"
+      // style={{ width: "100%", height: "100%", position: "relative", flex: 1}}
     >
       <Title
         level={3}
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          fontSize: "45px",
-          transform: `translate(${-50}%, ${-50}%)`,
-        }}
-        className="title-color"
+        className="title-color investment-content"
+        // style={{
+        //   position: "absolute",
+        //   top: "50%",
+        //   left: "50%",
+        //   fontSize: "45px",
+        //   transform: `translate(${-50}%, ${-50}%)`,
+        // }}
+        
       >
        {investment}/lần
       </Title>
