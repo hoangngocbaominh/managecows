@@ -1,38 +1,38 @@
-@import "../../styles//styles.scss";
 .method-payment {
   margin-top: 35px;
   padding-left: 40px;
   padding-right: 40px;
-  h3.ant-typography,
-  .ant-typography h3 {
-    margin-bottom: 2em;
-  }
-  .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after {
-    background-color: $main-color;
-  }
-  .ant-steps-dot .ant-steps-item-icon,
-  .ant-steps-dot.ant-steps-small .ant-steps-item-icon {
-    transform: scale(2.5);
-  }
 
-  .ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
-    background-color: $main-color;
+  .container {
+    h3.ant-typography,
+    .ant-typography h3 {
+      margin-bottom: 2em;
+    }
+    .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after {
+      background-color: #8dc63f;
+    }
+    .ant-steps-dot .ant-steps-item-icon,
+    .ant-steps-dot.ant-steps-small .ant-steps-item-icon {
+      transform: scale(2.5);
+    }
+    .ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
+      background-color: #8dc63f;
+    }
+    .ant-steps-item:last-child > .ant-steps-item-container > .ant-steps-item-tail {
+      display: block;
+    }
   }
+}
 
-  .ant-steps-item:last-child > .ant-steps-item-container > .ant-steps-item-tail {
-    display: block;
-  }
-
-  @media only screen and (min-width: 992px) {
-    .method-payment .ant-steps {
+@media only screen and (min-width: 992px) {
+  .method-payment {
+    .ant-steps {
       margin-left: -50px;
     }
-
     .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
       color: black;
       top: -50px;
     }
-
     .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description {
       color: black;
       text-align: left;
@@ -45,8 +45,10 @@
       transform: translateX(-32px);
     }
   }
+}
 
-  @media only screen and (max-width: 991px) {
+@media only screen and (max-width: 991px) {
+  .method-payment {
     .ant-steps-item-title {
       transform: translateX(-125px);
     }
