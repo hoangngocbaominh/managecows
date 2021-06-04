@@ -1,0 +1,28 @@
+
+.container{
+    max-width: 800px;
+    margin: auto;
+    padding: 0 15px;
+    .farm-cost{
+        margin: auto;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    .ant-card-bordered{
+        border-radius: 10px;
+    }
+    .ant-card-body{
+        padding: 15px;
+    }
+    @media only screen and (max-width: 347px) {
+        .total-price-title{
+            font-size: 30px !important;
+        }
+    }
+}
+
+ 
+
+
+
+

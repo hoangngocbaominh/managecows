@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Typography, Card } from "antd";
-import "../../styles/shadow.css";
-import "../../styles/styles.css";
+import "../../styles/shadow.scss";
+import "../../styles/styles.scss";
 const { Title } = Typography;
 InvestmentCost.propTypes = {
   investmentCost: PropTypes.number,

@@ -1,0 +1,40 @@
+.container {
+  .operation-costs .ant-typography {
+    text-align: left !important;
+  }
+  @media only screen and (max-width: 727px) {
+    .title-color.total-prices {
+      font-size: 17px !important;
+    }
+  }
+  @media only screen and (max-width: 636px) {
+    .rates {
+      font-size: 10px !important;
+    }
+  }
+  @media only screen and (max-width: 636px) {
+    .title-color.total-prices {
+      font-size: 15px !important;
+    }
+  }
+  @media only screen and (max-width: 575px) {
+    .rates {
+      font-size: 15px !important;
+    }
+  }
+  @media only screen and (max-width: 575px) {
+    .title-color.total-prices {
+      font-size: 20px !important;
+    }
+  }
+  @media only screen and (max-width: 425px) {
+    .rates {
+      font-size: 12px !important;
+    }
+  }
+  @media only screen and (max-width: 425px) {
+    .title-color.total-prices {
+      font-size: 16px !important;
+    }
+  }
+}

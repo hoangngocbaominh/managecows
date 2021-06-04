@@ -4,9 +4,9 @@ import { Button, Col, Row, Typography } from "antd";
 import QuantityStatus from "../QuantityStatus/QuantityStatus";
 import InvestmentCost from "../InvestmentCost/InvestmentCost";
 import OperationCost from "../OperationCost/OperationCost";
-import "../FarmCost/farmcost.css";
-import "../OperationCost/operationcost.css";
-import "../../styles/styles.css";
+import "../FarmCost/farmcost.scss";
+import "../OperationCost/operationcost.scss";
+import "../../styles/styles.scss";
 import { Link } from "react-scroll";
 const { Title } = Typography;
 FarmCost.propTypes = {
@@ -90,6 +90,7 @@ function FarmCost(props) {
               <Row gutter={[24, 24]}>
                 <Col lg={24} sm={24} xs={24}>
                   <Title
+                    className="total-price-title"
                     level={1}
                     style={{ textAlign: "left", color: totalPriceColor}}
 

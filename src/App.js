@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import "antd/dist/antd.css";
 import FarmCost from "./components/FarmCost/FarmCost";
 import PaymentMethod from "./components/PaymentMethod/PaymentMethod";
@@ -17,7 +17,7 @@ function App() {
   const totalPriceColor = "#8dc63f";
   const totalPriceColorNomalFarm = "#ffffff";
   return (
-    <div className="App app-general">
+    <div className="App">
       <FarmCost
         title={titleFarmCost}
         ratesCows={ratesNomalCows}
