@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Card, Col, Row, Typography } from "antd";
 import "../FarmCost/farmcost.scss";
-import "../../styles/shadow.scss";
 import "../../styles/styles.scss";
 import "../OperationCost/operationcost.scss";
 const { Title, Text } = Typography;

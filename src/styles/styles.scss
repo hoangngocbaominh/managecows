@@ -2,6 +2,9 @@ $slider-color: #4e8501;
 $main-color: #8dc63f;
 
 .title-color{
-    color: #8dc63f !important;
+    color: $main-color !important;
     font-weight: 1000;
+}
+.shadow{
+    box-shadow: 1px 2px 6px 2px #8dc63f;
 }

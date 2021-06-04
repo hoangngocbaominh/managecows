@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Typography, Card } from "antd";
-import "../../styles/shadow.scss";
 import "../../styles/styles.scss";
 import "../InvestmentCost/investment.scss";
 const { Title } = Typography;
@@ -13,27 +12,13 @@ InvestmentCost.defaultProps = {
 };
 
 function InvestmentCost(props) {
-  const {investmentCost} = props;
-  console.log(investmentCost)
+  const { investmentCost } = props;
+  console.log(investmentCost);
   const investment = investmentCost.toLocaleString();
   return (
-    <Card
-      className="shadow investment-card"
-      // style={{ width: "100%", height: "100%", position: "relative", flex: 1}}
-    >
-      <Title
-        level={3}
-        className="title-color investment-content"
-        // style={{
-        //   position: "absolute",
-        //   top: "50%",
-        //   left: "50%",
-        //   fontSize: "45px",
-        //   transform: `translate(${-50}%, ${-50}%)`,
-        // }}
-        
-      >
-       {investment}/lần
+    <Card className="shadow investment-card">
+      <Title level={3} className="title-color investment-content">
+        {investment}/lần
       </Title>
     </Card>
   );
