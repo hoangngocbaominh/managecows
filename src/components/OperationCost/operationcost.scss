@@ -4,10 +4,21 @@
       text-align: left !important;
     }
   }
+  @media only screen and (max-width: 762px) {
+    .rates {
+      font-size: 12px !important;
+    }
+    .title-color.total-prices {
+      font-size: 17px !important;
+    }
+    
+    
+  }
   @media only screen and (max-width: 727px) {
     .title-color.total-prices {
       font-size: 17px !important;
     }
+    
   }
   @media only screen and (max-width: 636px) {
     .rates {
