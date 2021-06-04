@@ -1,3 +1,4 @@
+@import "../../styles//styles.scss";
 .method-payment {
   margin-top: 35px;
   padding-left: 40px;
@@ -7,7 +8,7 @@
     margin-bottom: 2em;
   }
   .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after {
-    background-color: #8dc63f;
+    background-color: $main-color;
   }
   .ant-steps-dot .ant-steps-item-icon,
   .ant-steps-dot.ant-steps-small .ant-steps-item-icon {
@@ -15,7 +16,7 @@
   }
 
   .ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
-    background-color: #8dc63f;
+    background-color: $main-color;
   }
 
   .ant-steps-item:last-child > .ant-steps-item-container > .ant-steps-item-tail {
