@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Card, Col, Row, Typography } from "antd";
-import "../FarmCost/farmcost.css";
-import "../../styles/shadow.css";
+import "../FarmCost/farmcost.scss";
+import "../../styles/styles.scss";
 
 const { Title, Text } = Typography;
 

@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import "antd/dist/antd.css";
 import FarmCost from "./components/FarmCost/FarmCost";
 import PaymentMethod from "./components/PaymentMethod/PaymentMethod";

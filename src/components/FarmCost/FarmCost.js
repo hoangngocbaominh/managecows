@@ -4,7 +4,7 @@ import { Button, Col, Row, Typography } from "antd";
 import QuantityStatus from "../QuantityStatus/QuantityStatus";
 import InvestmentCost from "../InvestmentCost/InvestmentCost";
 import OperationCost from "../OperationCost/OperationCost";
-import "../FarmCost/farmcost.css";
+import "../FarmCost/farmcost.scss";
 import { Link } from "react-scroll";
 const { Title } = Typography;
 FarmCost.propTypes = {
