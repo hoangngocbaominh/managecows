@@ -27,10 +27,7 @@ function QuantityStatus(props) {
     <>
       <div
         className="wrap-status"
-        style={{ width: "100%", height: "50%", position: "relative" }}
       >
-        {/* <p className="quantity-left">100 con</p>
-        <p className="quantity-right">5000 con</p> */}
         <div className="quantity-content">
         <p className="quantity-left">100 con</p>
         <p className="quantity-right">5000 con</p>
