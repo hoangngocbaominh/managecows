@@ -65,32 +65,30 @@
     }
   }
 
-  .quantity-left {
+  .quantity {
     position: absolute;
-    top: 21px;
-    left: 100px;
     font-weight: bold;
-  }
+    &-left {
+      @extend .quantity;
+      top: 21px;
+      left: 100px;
+    }
+    &-right {
+      @extend .quantity;
+      top: 21px;
+      right: 13px;
+    }
+    &-sows-left {
+      @extend .quantity;
+      top: 85px;
+      left: 100px;
+    }
 
-
-  .quantity-right {
-    position: absolute;
-    top: 21px;
-    right: 13px;
-    font-weight: bold;
-  }
-  .quantitySows-left {
-    position: absolute;
-    top: 85px;
-    left: 100px;
-    font-weight: bold;
-  }
-
-  .quantitySows-right {
-    position: absolute;
-    top: 85px;
-    right: 13px;
-    font-weight: bold;
+    &-sows-right {
+      @extend .quantity;
+      top: 85px;
+      right: 13px;
+    }
   }
 
   .quantity-content {
@@ -101,7 +99,6 @@
       margin-top: 4px;
     }
   }
- 
 
   .ant-tooltip-inner {
     height: 32px;

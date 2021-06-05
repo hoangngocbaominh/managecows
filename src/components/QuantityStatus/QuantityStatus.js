@@ -44,8 +44,8 @@ function QuantityStatus(props) {
         </div>
 
         <div className="quantity-content">
-        <p className="quantitySows-left">100 con</p>
-        <p className="quantitySows-right">5000 con</p>
+        <p className="quantity-sows-left">100 con</p>
+        <p className="quantity-sows-right">5000 con</p>
           <h4>Bò nái</h4>
           <Slider
             marks={marks}
